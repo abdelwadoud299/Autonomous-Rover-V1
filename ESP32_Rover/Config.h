@@ -1,0 +1,77 @@
+
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#include <Arduino.h>
+
+// Robot configuration
+#define SERIAL_BAUD_RATE 115200
+
+// Safety configuration
+#define OBSTACLE_DISTANCE_CM 25
+#define ULTRASONIC_TRIG_PIN 18
+#define ULTRASONIC_ECHO_PIN 19
+// Motor Driver Pins - temporary mapping
+#define MOTOR_LEFT_IN1   25
+#define MOTOR_LEFT_IN2   26
+
+#define MOTOR_RIGHT_IN1  32
+#define MOTOR_RIGHT_IN2  33
+
+// PWM Configuration
+#define MOTOR_PWM_FREQ       1000
+#define MOTOR_PWM_RESOLUTION 8
+
+#define MOTOR_LEFT_D0   25
+#define MOTOR_LEFT_D1   26
+
+#define MOTOR_RIGHT_D2  32
+#define MOTOR_RIGHT_D3  33
+
+#define MOTOR_PWM_FREQ       1000
+#define MOTOR_PWM_RESOLUTION 8
+
+#define LEFT_ENCODER_A  34
+#define LEFT_ENCODER_B  35
+
+#define RIGHT_ENCODER_A 36
+#define RIGHT_ENCODER_B 39
+
+#define FIELD_WIDTH_M       2.0f
+#define FIELD_LENGTH_M      3.0f
+#define COVERAGE_ROW_WIDTH  0.5f
+
+#define ENCODER_PULSES_PER_MOTOR_REV  11
+#define MOTOR_GEAR_RATIO              171
+#define ENCODER_COUNTS_PER_OUTPUT_REV \
+    (ENCODER_PULSES_PER_MOTOR_REV * MOTOR_GEAR_RATIO)
+
+#define WHEEL_DIAMETER_CM 2.0f
+
+#define WHEEL_CIRCUMFERENCE_CM \
+    (3.14159265f * WHEEL_DIAMETER_CM)
+
+#define ENCODER_COUNTS_PER_OUTPUT_REV \
+    (11L * 171L * 4L)
+    #define COVERAGE_SPEED 120
+#define COVERAGE_ROW_WIDTH_M 0.5f
+#define COVERAGE_TURN_DELAY_MS 500
+
+
+#define WHEEL_BASE_CM 5.0f
+#define COVERAGE_SPEED 120
+#define COVERAGE_ROW_WIDTH_M 0.5f
+
+#define OBSTACLE_REVERSE_SPEED 100
+#define OBSTACLE_TURN_SPEED 100
+
+#define OBSTACLE_REVERSE_TIME_MS 500
+#define OBSTACLE_TURN_TIME_MS 500
+#define OBSTACLE_CLEARANCE_CM 30
+
+#define OBSTACLE_REVERSE_SPEED 100
+#define OBSTACLE_TURN_SPEED 100
+
+#define OBSTACLE_REVERSE_TIME_MS 500
+#define OBSTACLE_TURN_TIME_MS 500
+#endif
